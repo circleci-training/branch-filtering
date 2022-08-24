@@ -13,7 +13,8 @@ jobs:
             equal: [ main, << pipeline.git.branch >> ]
           steps:
             - run: echo "If you can see this message, I've been triggered on the main branch"
-  workflows:
-    build-workflow:
-      jobs:
-        - build
+            
+workflows:
+  build-workflow:
+    jobs:
+      - build
